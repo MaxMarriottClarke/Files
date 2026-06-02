@@ -1,0 +1,64 @@
+%MSG-i AlpakaService:  (NoModuleName) 02-Jun-2026 09:35:50 CEST pre-events
+AlpakaServiceSerialSync succesfully initialised.
+Found 1 device:
+  - AMD EPYC 9754 128-Core Processor
+%MSG
+%MSG-i CUDAService:  (NoModuleName) 02-Jun-2026 09:35:50 CEST pre-events
+CUDA runtime version 12.9, driver version 12.9, NVIDIA driver version 575.51.03
+CUDA device 0: Tesla T4 (sm_75)
+CUDA device 1: Tesla T4 (sm_75)
+%MSG
+%MSG-i AlpakaService:  (NoModuleName) 02-Jun-2026 09:35:50 CEST pre-events
+AlpakaServiceCudaAsync succesfully initialised.
+Found 2 devices:
+  - Tesla T4
+  - Tesla T4
+%MSG
+%MSG-i ROCmService:  (NoModuleName) 02-Jun-2026 09:35:51 CEST pre-events
+ROCm runtime version 70125.42, driver version 70125.42, AMD driver version 6.12.12
+ROCm device 0: AMD Radeon PRO W7600 (gfx1102)
+%MSG
+%MSG-i AlpakaService:  (NoModuleName) 02-Jun-2026 09:35:51 CEST pre-events
+AlpakaServiceROCmAsync succesfully initialised.
+Found 1 device:
+  - AMD Radeon PRO W7600
+%MSG
+02-Jun-2026 09:35:53 CEST  Initiating request to open file file:step1.root
+02-Jun-2026 09:35:54 CEST  Successfully opened file file:step1.root
+constructing InputMakerPhase2
+ using Phase2 DT trigger primitives
+Begin processing the 1st record. Run 1, Event 1, LumiSection 1 on stream 0 at 02-Jun-2026 09:36:33.952 CEST
+#--------------------------------------------------------------------------
+#                         FastJet release 3.4.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the GNU GPL v2 or higher.  
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Begin processing the 2nd record. Run 1, Event 2, LumiSection 1 on stream 0 at 02-Jun-2026 09:36:39.365 CEST
+Begin processing the 3rd record. Run 1, Event 3, LumiSection 1 on stream 0 at 02-Jun-2026 09:36:42.487 CEST
+Begin processing the 4th record. Run 1, Event 4, LumiSection 1 on stream 0 at 02-Jun-2026 09:36:45.638 CEST
+Begin processing the 5th record. Run 1, Event 5, LumiSection 1 on stream 0 at 02-Jun-2026 09:36:48.789 CEST
+Begin processing the 6th record. Run 1, Event 6, LumiSection 1 on stream 0 at 02-Jun-2026 09:36:51.632 CEST
+
+std::bad_alloc exception
+----- Begin Fatal Exception 02-Jun-2026 09:36:54 CEST-----------------------
+An exception of category 'BadAlloc' occurred while
+   [0] Processing  Event run: 1 lumi: 1 event: 6 stream: 0
+   [1] Running path 'MC_BTV'
+   [2] Calling method for module TICLLayerTileProducer/'hltTiclLayerTileProducer'
+Exception Message:
+A std::bad_alloc exception was thrown.
+The job has probably exhausted the virtual memory available to the process.
+----- End Fatal Exception -------------------------------------------------
+Another exception was caught while trying to clean up files after the primary fatal exception.
+%MSG-w ThroughputService:  AfterModEndJob 02-Jun-2026 09:36:54 CEST EndJob
+Not enough events to measure the throughput with a resolution of 50 events
+%MSG
+02-Jun-2026 09:36:54 CEST  Closed file file:step1.root

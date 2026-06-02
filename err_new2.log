@@ -1,0 +1,204 @@
+%MSG-i AlpakaService:  (NoModuleName) 02-Jun-2026 09:38:00 CEST pre-events
+AlpakaServiceSerialSync succesfully initialised.
+Found 1 device:
+  - AMD EPYC 9754 128-Core Processor
+%MSG
+%MSG-i CUDAService:  (NoModuleName) 02-Jun-2026 09:38:00 CEST pre-events
+CUDA runtime version 12.9, driver version 12.9, NVIDIA driver version 575.51.03
+CUDA device 0: Tesla T4 (sm_75)
+CUDA device 1: Tesla T4 (sm_75)
+%MSG
+%MSG-i AlpakaService:  (NoModuleName) 02-Jun-2026 09:38:01 CEST pre-events
+AlpakaServiceCudaAsync succesfully initialised.
+Found 2 devices:
+  - Tesla T4
+  - Tesla T4
+%MSG
+%MSG-i ROCmService:  (NoModuleName) 02-Jun-2026 09:38:01 CEST pre-events
+ROCm runtime version 70125.42, driver version 70125.42, AMD driver version 6.12.12
+ROCm device 0: AMD Radeon PRO W7600 (gfx1102)
+%MSG
+%MSG-i AlpakaService:  (NoModuleName) 02-Jun-2026 09:38:01 CEST pre-events
+AlpakaServiceROCmAsync succesfully initialised.
+Found 1 device:
+  - AMD Radeon PRO W7600
+%MSG
+02-Jun-2026 09:38:04 CEST  Initiating request to open file file:step1.root
+02-Jun-2026 09:38:04 CEST  Successfully opened file file:step1.root
+constructing InputMakerPhase2
+ using Phase2 DT trigger primitives
+Begin processing the 1st record. Run 1, Event 1, LumiSection 1 on stream 0 at 02-Jun-2026 09:38:43.966 CEST
+#--------------------------------------------------------------------------
+#                         FastJet release 3.4.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the GNU GPL v2 or higher.  
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Begin processing the 2nd record. Run 1, Event 2, LumiSection 1 on stream 0 at 02-Jun-2026 09:38:49.890 CEST
+Begin processing the 3rd record. Run 1, Event 3, LumiSection 1 on stream 0 at 02-Jun-2026 09:38:53.012 CEST
+Begin processing the 4th record. Run 1, Event 4, LumiSection 1 on stream 0 at 02-Jun-2026 09:38:56.196 CEST
+Begin processing the 5th record. Run 1, Event 5, LumiSection 1 on stream 0 at 02-Jun-2026 09:38:59.334 CEST
+Begin processing the 6th record. Run 1, Event 6, LumiSection 1 on stream 0 at 02-Jun-2026 09:39:02.407 CEST
+
+
+A fatal system signal has occurred: segmentation violation
+The following is the call stack containing the origin of the signal.
+
+Tue Jun  2 09:39:04 CEST 2026
+Thread 15 (Thread 0x7f4eb041e700 (LWP 3760497) "cmsRun"):
+#0  0x00007f4eebe34f22 in waitpid () from /lib64/libc.so.6
+#1  0x00007f4ee3e4a338 in edm::service::cmssw_stacktrace_fork() () from /cvmfs/cms-ib.cern.ch/sw/x86_64/nweek-02943/el8_amd64_gcc13/cms/cmssw/CMSSW_17_0_X_2026-05-27-1100/lib/el8_amd64_gcc13/pluginFWCoreServicesPlugins.so
+#2  0x00007f4ee3e4bb12 in edm::service::InitRootHandlers::stacktraceHelperThread() () from /cvmfs/cms-ib.cern.ch/sw/x86_64/nweek-02943/el8_amd64_gcc13/cms/cmssw/CMSSW_17_0_X_2026-05-27-1100/lib/el8_amd64_gcc13/pluginFWCoreServicesPlugins.so
+#3  0x00007f4eec1fc204 in std::execute_native_thread_routine (__p=0x7f4eb3d80670) at ../../../../../libstdc++-v3/src/c++11/thread.cc:104
+#4  0x00007f4eeaeec1ca in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4eebd668d3 in clone () from /lib64/libc.so.6
+Thread 14 (Thread 0x7f4ea9318700 (LWP 3760503) "cuda0000240000a"):
+#0  0x00007f4eebe5fbb1 in poll () from /lib64/libc.so.6
+#1  0x00007f4ea9678217 in ?? () from /lib64/libcuda.so.1
+#2  0x00007f4ea975d55a in ?? () from /lib64/libcuda.so.1
+#3  0x00007f4ea9668243 in ?? () from /lib64/libcuda.so.1
+#4  0x00007f4eeaeec1ca in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4eebd668d3 in clone () from /lib64/libc.so.6
+Thread 13 (Thread 0x7f4ea01bd700 (LWP 3760510) "cuda-EvtHandlr"):
+#0  0x00007f4eebe5fbb1 in poll () from /lib64/libc.so.6
+#1  0x00007f4ea9678217 in ?? () from /lib64/libcuda.so.1
+#2  0x00007f4ea975d55a in ?? () from /lib64/libcuda.so.1
+#3  0x00007f4ea9668243 in ?? () from /lib64/libcuda.so.1
+#4  0x00007f4eeaeec1ca in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4eebd668d3 in clone () from /lib64/libc.so.6
+Thread 12 (Thread 0x7f4e8efff700 (LWP 3760511) "cuda-EvtHandlr"):
+#0  0x00007f4eebe5fbb1 in poll () from /lib64/libc.so.6
+#1  0x00007f4ea9678217 in ?? () from /lib64/libcuda.so.1
+#2  0x00007f4ea975d55a in ?? () from /lib64/libcuda.so.1
+#3  0x00007f4ea9668243 in ?? () from /lib64/libcuda.so.1
+#4  0x00007f4eeaeec1ca in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f4eebd668d3 in clone () from /lib64/libc.so.6
+Thread 11 (Thread 0x7f4e8c9ff700 (LWP 3760514) "cmsRun"):
+#0  0x00007f4eebd6622b in ioctl () from /lib64/libc.so.6
+#1  0x00007f4ed01ce730 in hsakmt_ioctl () from /cvmfs/cms-ib.cern.ch/sw/x86_64/week1/el8_amd64_gcc13/cms/cmssw-patch/CMSSW_17_0_X_2026-05-29-1100/external/el8_amd64_gcc13/lib/libhsa-runtime64.so.1
+#2  0x00007f4ed01c54e3 in hsaKmtWaitOnMultipleEvents_Ext () from /cvmfs/cms-ib.cern.ch/sw/x86_64/week1/el8_amd64_gcc13/cms/cmssw-patch/CMSSW_17_0_X_2026-05-29-1100/external/el8_amd64_gcc13/lib/libhsa-runtime64.so.1
+#3  0x00007f4ed0153eb9 in rocr::core::Signal::WaitAnyExceptions(unsigned int, hsa_signal_s const*, hsa_signal_condition_t const*, long const*, long*) () from /cvmfs/cms-ib.cern.ch/sw/x86_64/week1/el8_amd64_gcc13/cms/cmssw-patch/CMSSW_17_0_X_2026-05-29-1100/external/el8_amd64_gcc13/lib/libhsa-runtime64.so.1
+#4  0x00007f4ed0132078 in rocr::core::Runtime::AsyncEventsLoop(void*) () from /cvmfs/cms-ib.cern.ch/sw/x86_64/week1/el8_amd64_gcc13/cms/cmssw-patch/CMSSW_17_0_X_2026-05-29-1100/external/el8_amd64_gcc13/lib/libhsa-runtime64.so.1
+#5  0x00007f4ed00d92cd in rocr::os::ThreadTrampoline(void*) () from /cvmfs/cms-ib.cern.ch/sw/x86_64/week1/el8_amd64_gcc13/cms/cmssw-patch/CMSSW_17_0_X_2026-05-29-1100/external/el8_amd64_gcc13/lib/libhsa-runtime64.so.1
+#6  0x00007f4eeaeec1ca in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f4eebd668d3 in clone () from /lib64/libc.so.6
+Thread 10 (Thread 0x7f4d7e1ff700 (LWP 3760516) "cmsRun"):
+#0  0x00007f4eebd6622b in ioctl () from /lib64/libc.so.6
+#1  0x00007f4ed01ce730 in hsakmt_ioctl () from /cvmfs/cms-ib.cern.ch/sw/x86_64/week1/el8_amd64_gcc13/cms/cmssw-patch/CMSSW_17_0_X_2026-05-29-1100/external/el8_amd64_gcc13/lib/libhsa-runtime64.so.1
+#2  0x00007f4ed01c54e3 in hsaKmtWaitOnMultipleEvents_Ext () from /cvmfs/cms-ib.cern.ch/sw/x86_64/week1/el8_amd64_gcc13/cms/cmssw-patch/CMSSW_17_0_X_2026-05-29-1100/external/el8_amd64_gcc13/lib/libhsa-runtime64.so.1
+#3  0x00007f4ed0131c73 in rocr::core::Runtime::AsyncEventsLoop(void*) () from /cvmfs/cms-ib.cern.ch/sw/x86_64/week1/el8_amd64_gcc13/cms/cmssw-patch/CMSSW_17_0_X_2026-05-29-1100/external/el8_amd64_gcc13/lib/libhsa-runtime64.so.1
+#4  0x00007f4ed00d92cd in rocr::os::ThreadTrampoline(void*) () from /cvmfs/cms-ib.cern.ch/sw/x86_64/week1/el8_amd64_gcc13/cms/cmssw-patch/CMSSW_17_0_X_2026-05-29-1100/external/el8_amd64_gcc13/lib/libhsa-runtime64.so.1
+#5  0x00007f4eeaeec1ca in start_thread () from /lib64/libpthread.so.0
+#6  0x00007f4eebd668d3 in clone () from /lib64/libc.so.6
+Thread 9 (Thread 0x7f4cdd263700 (LWP 3760526) "cmsRun"):
+#0  0x00007f4eeaef2371 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f4d7024a19b in Eigen::ThreadPoolTempl<tsl::thread::EigenEnvironment>::WaitForWork(Eigen::EventCount::Waiter*, tsl::thread::EigenEnvironment::Task*) () from /cvmfs/cms-ib.cern.ch/sw/x86_64/week1/el8_amd64_gcc13/cms/cmssw-patch/CMSSW_17_0_X_2026-05-29-1100/external/el8_amd64_gcc13/lib/libtensorflow_cc.so.2
+#2  0x00007f4d7024a7ed in Eigen::ThreadPoolTempl<tsl::thread::EigenEnvironment>::WorkerLoop(int) () from /cvmfs/cms-ib.cern.ch/sw/x86_64/week1/el8_amd64_gcc13/cms/cmssw-patch/CMSSW_17_0_X_2026-05-29-1100/external/el8_amd64_gcc13/lib/libtensorflow_cc.so.2
+#3  0x00007f4d70248678 in void absl::lts_20230802::internal_any_invocable::RemoteInvoker<false, void, tsl::thread::EigenEnvironment::CreateThread(std::function<void ()>)::{lambda()#1}&>(absl::lts_20230802::internal_any_invocable::TypeErasedState*) () from /cvmfs/cms-ib.cern.ch/sw/x86_64/week1/el8_amd64_gcc13/cms/cmssw-patch/CMSSW_17_0_X_2026-05-29-1100/external/el8_amd64_gcc13/lib/libtensorflow_cc.so.2
+#4  0x00007f4d5ae628b2 in tsl::(anonymous namespace)::PThread::ThreadFn(void*) () from /cvmfs/cms-ib.cern.ch/sw/x86_64/week1/el8_amd64_gcc13/cms/cmssw-patch/CMSSW_17_0_X_2026-05-29-1100/external/el8_amd64_gcc13/lib/libtensorflow_framework.so.2
+#5  0x00007f4eeaeec1ca in start_thread () from /lib64/libpthread.so.0
+#6  0x00007f4eebd668d3 in clone () from /lib64/libc.so.6
+Thread 8 (Thread 0x7f4cdca62700 (LWP 3760527) "cmsRun"):
+#0  0x00007f4eeaef2371 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f4d7024a19b in Eigen::ThreadPoolTempl<tsl::thread::EigenEnvironment>::WaitForWork(Eigen::EventCount::Waiter*, tsl::thread::EigenEnvironment::Task*) () from /cvmfs/cms-ib.cern.ch/sw/x86_64/week1/el8_amd64_gcc13/cms/cmssw-patch/CMSSW_17_0_X_2026-05-29-1100/external/el8_amd64_gcc13/lib/libtensorflow_cc.so.2
+#2  0x00007f4d7024a7ed in Eigen::ThreadPoolTempl<tsl::thread::EigenEnvironment>::WorkerLoop(int) () from /cvmfs/cms-ib.cern.ch/sw/x86_64/week1/el8_amd64_gcc13/cms/cmssw-patch/CMSSW_17_0_X_2026-05-29-1100/external/el8_amd64_gcc13/lib/libtensorflow_cc.so.2
+#3  0x00007f4d70248678 in void absl::lts_20230802::internal_any_invocable::RemoteInvoker<false, void, tsl::thread::EigenEnvironment::CreateThread(std::function<void ()>)::{lambda()#1}&>(absl::lts_20230802::internal_any_invocable::TypeErasedState*) () from /cvmfs/cms-ib.cern.ch/sw/x86_64/week1/el8_amd64_gcc13/cms/cmssw-patch/CMSSW_17_0_X_2026-05-29-1100/external/el8_amd64_gcc13/lib/libtensorflow_cc.so.2
+#4  0x00007f4d5ae628b2 in tsl::(anonymous namespace)::PThread::ThreadFn(void*) () from /cvmfs/cms-ib.cern.ch/sw/x86_64/week1/el8_amd64_gcc13/cms/cmssw-patch/CMSSW_17_0_X_2026-05-29-1100/external/el8_amd64_gcc13/lib/libtensorflow_framework.so.2
+#5  0x00007f4eeaeec1ca in start_thread () from /lib64/libpthread.so.0
+#6  0x00007f4eebd668d3 in clone () from /lib64/libc.so.6
+Thread 7 (Thread 0x7f4cdb9ff700 (LWP 3760528) "cmsRun"):
+#0  0x00007f4eeaef2371 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f4d7024a19b in Eigen::ThreadPoolTempl<tsl::thread::EigenEnvironment>::WaitForWork(Eigen::EventCount::Waiter*, tsl::thread::EigenEnvironment::Task*) () from /cvmfs/cms-ib.cern.ch/sw/x86_64/week1/el8_amd64_gcc13/cms/cmssw-patch/CMSSW_17_0_X_2026-05-29-1100/external/el8_amd64_gcc13/lib/libtensorflow_cc.so.2
+#2  0x00007f4d7024a7ed in Eigen::ThreadPoolTempl<tsl::thread::EigenEnvironment>::WorkerLoop(int) () from /cvmfs/cms-ib.cern.ch/sw/x86_64/week1/el8_amd64_gcc13/cms/cmssw-patch/CMSSW_17_0_X_2026-05-29-1100/external/el8_amd64_gcc13/lib/libtensorflow_cc.so.2
+#3  0x00007f4d70248678 in void absl::lts_20230802::internal_any_invocable::RemoteInvoker<false, void, tsl::thread::EigenEnvironment::CreateThread(std::function<void ()>)::{lambda()#1}&>(absl::lts_20230802::internal_any_invocable::TypeErasedState*) () from /cvmfs/cms-ib.cern.ch/sw/x86_64/week1/el8_amd64_gcc13/cms/cmssw-patch/CMSSW_17_0_X_2026-05-29-1100/external/el8_amd64_gcc13/lib/libtensorflow_cc.so.2
+#4  0x00007f4d5ae628b2 in tsl::(anonymous namespace)::PThread::ThreadFn(void*) () from /cvmfs/cms-ib.cern.ch/sw/x86_64/week1/el8_amd64_gcc13/cms/cmssw-patch/CMSSW_17_0_X_2026-05-29-1100/external/el8_amd64_gcc13/lib/libtensorflow_framework.so.2
+#5  0x00007f4eeaeec1ca in start_thread () from /lib64/libpthread.so.0
+#6  0x00007f4eebd668d3 in clone () from /lib64/libc.so.6
+Thread 6 (Thread 0x7f4c70247700 (LWP 3760529) "edm async pool"):
+#0  0x00007f4eeaef2371 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f4eece143e8 in edm::impl::WaitingThread::threadLoop() () from /cvmfs/cms-ib.cern.ch/sw/x86_64/nweek-02943/el8_amd64_gcc13/cms/cmssw/CMSSW_17_0_X_2026-05-27-1100/lib/el8_amd64_gcc13/libFWCoreConcurrency.so
+#2  0x00007f4eec1fc204 in std::execute_native_thread_routine (__p=0x7f4c92054e20) at ../../../../../libstdc++-v3/src/c++11/thread.cc:104
+#3  0x00007f4eeaeec1ca in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f4eebd668d3 in clone () from /lib64/libc.so.6
+Thread 5 (Thread 0x7f4c6f5ff700 (LWP 3760530) "edm async pool"):
+#0  0x00007f4eebe35178 in nanosleep () from /lib64/libc.so.6
+#1  0x00007f4eebe3507e in sleep () from /lib64/libc.so.6
+#2  0x00007f4ee3e4a1cc in sig_pause_for_stacktrace () from /cvmfs/cms-ib.cern.ch/sw/x86_64/nweek-02943/el8_amd64_gcc13/cms/cmssw/CMSSW_17_0_X_2026-05-27-1100/lib/el8_amd64_gcc13/pluginFWCoreServicesPlugins.so
+#3  <signal handler called>
+#4  0x00007f4d4d2a02ab in trklet::MatchEngineUnit::setAlmostFull() () from /data/mmarriot/heterogeneous-TICL/new/CMSSW_17_0_X_2026-05-29-1100/lib/el8_amd64_gcc13/libL1TriggerTrackFindingTracklet.so
+#5  0x00007f4d4d2a7d57 in trklet::MatchProcessor::execute(unsigned int, double) () from /data/mmarriot/heterogeneous-TICL/new/CMSSW_17_0_X_2026-05-29-1100/lib/el8_amd64_gcc13/libL1TriggerTrackFindingTracklet.so
+#6  0x00007f4d4d2b4d6f in trklet::Sector::executeMP() () from /data/mmarriot/heterogeneous-TICL/new/CMSSW_17_0_X_2026-05-29-1100/lib/el8_amd64_gcc13/libL1TriggerTrackFindingTracklet.so
+#7  0x00007f4d4d31afe2 in trklet::TrackletEventProcessor::event(trklet::SLHCEvent&, std::vector<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::allocator<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >&, std::vector<std::vector<trklet::StubStreamData, std::allocator<trklet::StubStreamData> >, std::allocator<std::vector<trklet::StubStreamData, std::allocator<trklet::StubStreamData> > > >&) () from /data/mmarriot/heterogeneous-TICL/new/CMSSW_17_0_X_2026-05-29-1100/lib/el8_amd64_gcc13/libL1TriggerTrackFindingTracklet.so
+#8  0x00007f4d4d3e2302 in L1FPGATrackProducer::produce(edm::Event&, edm::EventSetup const&) () from /data/mmarriot/heterogeneous-TICL/new/CMSSW_17_0_X_2026-05-29-1100/lib/el8_amd64_gcc13/pluginTrackFindingTrackletPlugins.so
+#9  0x00007f4eecc49c08 in edm::one::EDProducerBase::doEvent(edm::EventTransitionInfo const&, edm::ActivityRegistry*, edm::ModuleCallingContext const*) () from /cvmfs/cms-ib.cern.ch/sw/x86_64/nweek-02943/el8_amd64_gcc13/cms/cmssw/CMSSW_17_0_X_2026-05-27-1100/lib/el8_amd64_gcc13/libFWCoreFramework.so
+#10 0x00007f4eecc3ab57 in edm::WorkerT<edm::one::EDProducerBase>::implDo(edm::EventTransitionInfo const&, edm::ModuleCallingContext const*) () from /cvmfs/cms-ib.cern.ch/sw/x86_64/nweek-02943/el8_amd64_gcc13/cms/cmssw/CMSSW_17_0_X_2026-05-27-1100/lib/el8_amd64_gcc13/libFWCoreFramework.so
+#11 0x00007f4eecbcad12 in std::__exception_ptr::exception_ptr edm::Worker::runModuleAfterAsyncPrefetch<edm::OccurrenceTraits<edm::EventPrincipal, (edm::TransitionActionType)1> >(std::__exception_ptr::exception_ptr, edm::OccurrenceTraits<edm::EventPrincipal, (edm::TransitionActionType)1>::TransitionInfoType const&, edm::StreamID, edm::ParentContext const&, edm::OccurrenceTraits<edm::EventPrincipal, (edm::TransitionActionType)1>::Context const*) () from /cvmfs/cms-ib.cern.ch/sw/x86_64/nweek-02943/el8_amd64_gcc13/cms/cmssw/CMSSW_17_0_X_2026-05-27-1100/lib/el8_amd64_gcc13/libFWCoreFramework.so
+#12 0x00007f4eecbccad4 in edm::SerialTaskQueue::QueuedTask<edm::SerialTaskQueueChain::push<edm::Worker::RunModuleTask<edm::OccurrenceTraits<edm::EventPrincipal, (edm::TransitionActionType)1> >::execute()::{lambda()#1}&>(tbb::detail::d2::task_group&, edm::Worker::RunModuleTask<edm::OccurrenceTraits<edm::EventPrincipal, (edm::TransitionActionType)1> >::execute()::{lambda()#1}&)::{lambda()#1}>::execute() () from /cvmfs/cms-ib.cern.ch/sw/x86_64/nweek-02943/el8_amd64_gcc13/cms/cmssw/CMSSW_17_0_X_2026-05-27-1100/lib/el8_amd64_gcc13/libFWCoreFramework.so
+#13 0x00007f4eece15417 in tbb::detail::d2::function_task<edm::SerialTaskQueue::spawn(edm::SerialTaskQueue::TaskBase&)::{lambda()#1}>::execute(tbb::detail::d1::execution_data&) () from /cvmfs/cms-ib.cern.ch/sw/x86_64/nweek-02943/el8_amd64_gcc13/cms/cmssw/CMSSW_17_0_X_2026-05-27-1100/lib/el8_amd64_gcc13/libFWCoreConcurrency.so
+#14 0x00007f4eec3a61fb in tbb::detail::r1::task_dispatcher::local_wait_for_all<false, tbb::detail::r1::outermost_worker_waiter> (t=<optimized out>, waiter=..., this=0x7f4eea1b3b80) at src/tbb/task_dispatcher.h:344
+#15 tbb::detail::r1::task_dispatcher::local_wait_for_all<tbb::detail::r1::outermost_worker_waiter> (t=0x0, waiter=..., this=0x7f4eea1b3b80) at src/tbb/task_dispatcher.h:487
+#16 tbb::detail::r1::arena::process (tls=..., this=<optimized out>) at src/tbb/arena.cpp:216
+#17 tbb::detail::r1::thread_dispatcher_client::process (td=..., this=<optimized out>) at src/tbb/thread_dispatcher_client.h:41
+#18 tbb::detail::r1::thread_dispatcher::process (this=<optimized out>, j=...) at src/tbb/thread_dispatcher.cpp:195
+#19 0x00007f4eec399d25 in tbb::detail::r1::rml::private_worker::run (this=0x7f4ee3f1f100) at src/tbb/private_server.cpp:271
+#20 tbb::detail::r1::rml::private_worker::thread_routine (arg=0x7f4ee3f1f100) at src/tbb/private_server.cpp:221
+#21 0x00007f4eeaeec1ca in start_thread () from /lib64/libpthread.so.0
+#22 0x00007f4eebd668d3 in clone () from /lib64/libc.so.6
+Thread 4 (Thread 0x7f4e97fff700 (LWP 3760889) "edm async pool"):
+#0  0x00007f4eeaef2371 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f4eece143e8 in edm::impl::WaitingThread::threadLoop() () from /cvmfs/cms-ib.cern.ch/sw/x86_64/nweek-02943/el8_amd64_gcc13/cms/cmssw/CMSSW_17_0_X_2026-05-27-1100/lib/el8_amd64_gcc13/libFWCoreConcurrency.so
+#2  0x00007f4eec1fc204 in std::execute_native_thread_routine (__p=0x7f4c946ef140) at ../../../../../libstdc++-v3/src/c++11/thread.cc:104
+#3  0x00007f4eeaeec1ca in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f4eebd668d3 in clone () from /lib64/libc.so.6
+Thread 3 (Thread 0x7f4e971ff700 (LWP 3760900) "edm async pool"):
+#0  0x00007f4eeaef2371 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f4eece143e8 in edm::impl::WaitingThread::threadLoop() () from /cvmfs/cms-ib.cern.ch/sw/x86_64/nweek-02943/el8_amd64_gcc13/cms/cmssw/CMSSW_17_0_X_2026-05-27-1100/lib/el8_amd64_gcc13/libFWCoreConcurrency.so
+#2  0x00007f4eec1fc204 in std::execute_native_thread_routine (__p=0x7f4c9459d8c0) at ../../../../../libstdc++-v3/src/c++11/thread.cc:104
+#3  0x00007f4eeaeec1ca in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f4eebd668d3 in clone () from /lib64/libc.so.6
+Thread 2 (Thread 0x7f4e969fe700 (LWP 3760901) "edm async pool"):
+#0  0x00007f4eeaef2371 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f4eece143e8 in edm::impl::WaitingThread::threadLoop() () from /cvmfs/cms-ib.cern.ch/sw/x86_64/nweek-02943/el8_amd64_gcc13/cms/cmssw/CMSSW_17_0_X_2026-05-27-1100/lib/el8_amd64_gcc13/libFWCoreConcurrency.so
+#2  0x00007f4eec1fc204 in std::execute_native_thread_routine (__p=0x7f4c953b7400) at ../../../../../libstdc++-v3/src/c++11/thread.cc:104
+#3  0x00007f4eeaeec1ca in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f4eebd668d3 in clone () from /lib64/libc.so.6
+Thread 1 (Thread 0x7f4eea6fb300 (LWP 3760468) "cmsRun"):
+#0  0x00007f4eebe5fbb1 in poll () from /lib64/libc.so.6
+#1  0x00007f4ee3e4bd3e in edm::service::InitRootHandlers::stacktraceFromThread() () from /cvmfs/cms-ib.cern.ch/sw/x86_64/nweek-02943/el8_amd64_gcc13/cms/cmssw/CMSSW_17_0_X_2026-05-27-1100/lib/el8_amd64_gcc13/pluginFWCoreServicesPlugins.so
+#2  0x00007f4ee3e4bf43 in sig_dostack_then_abort () from /cvmfs/cms-ib.cern.ch/sw/x86_64/nweek-02943/el8_amd64_gcc13/cms/cmssw/CMSSW_17_0_X_2026-05-27-1100/lib/el8_amd64_gcc13/pluginFWCoreServicesPlugins.so
+#3  <signal handler called>
+#4  0x00007f4d224985cd in std::construct_at<unsigned int, unsigned int const&> (__location=0x0) at /cvmfs/cms-ib.cern.ch/sw/x86_64/nweek-02943/el8_amd64_gcc13/external/gcc/13.4.0-6908cfdf803923e783448096ca4f0923/include/c++/13.4.0/bits/stl_construct.h:97
+#5  0x00007f4d2248f007 in std::allocator_traits<std::allocator<unsigned int> >::construct<unsigned int, unsigned int const&> (__p=0x0, __a=...) at /cvmfs/cms-ib.cern.ch/sw/x86_64/nweek-02943/el8_amd64_gcc13/external/gcc/13.4.0-6908cfdf803923e783448096ca4f0923/include/c++/13.4.0/bits/alloc_traits.h:540
+#6  std::vector<unsigned int, std::allocator<unsigned int> >::push_back (this=0x7f4c764ba240, __x=@0x7fff9bf5c36c: 33) at /cvmfs/cms-ib.cern.ch/sw/x86_64/nweek-02943/el8_amd64_gcc13/external/gcc/13.4.0-6908cfdf803923e783448096ca4f0923/include/c++/13.4.0/bits/stl_vector.h:1286
+#7  0x00007f4d2248f52d in TICLLayerTileT<ticl::TileConstants>::fill (this=0x7f4c764ac500, eta=2.52015924, phi=-0.37119019, layerClusterId=33) at /cvmfs/cms-ib.cern.ch/sw/x86_64/week1/el8_amd64_gcc13/cms/cmssw-patch/CMSSW_17_0_X_2026-05-29-1100/src/DataFormats/HGCalReco/interface/TICLLayerTile.h:22
+#8  0x00007f4d2258a6b3 in TICLGenericTile<std::array<TICLLayerTileT<ticl::TileConstants>, 100ul> >::fill (this=0x7f4c75a44500, index=111, eta=2.52015924, phi=-0.37119019, objectId=33) at /cvmfs/cms-ib.cern.ch/sw/x86_64/week1/el8_amd64_gcc13/cms/cmssw-patch/CMSSW_17_0_X_2026-05-29-1100/src/DataFormats/HGCalReco/interface/TICLLayerTile.h:114
+#9  0x00007f4d22469920 in TICLLayerTileProducer::produce (this=0x7f4d3d9c3200, evt=...) at src/RecoHGCal/TICL/plugins/TICLLayerTileProducer.cc:96
+#10 0x00007f4eecc55572 in edm::stream::EDProducerAdaptorBase::doEvent(edm::EventTransitionInfo const&, edm::ActivityRegistry*, edm::ModuleCallingContext const*) () from /cvmfs/cms-ib.cern.ch/sw/x86_64/nweek-02943/el8_amd64_gcc13/cms/cmssw/CMSSW_17_0_X_2026-05-27-1100/lib/el8_amd64_gcc13/libFWCoreFramework.so
+#11 0x00007f4eecc3c0d7 in edm::WorkerT<edm::stream::EDProducerAdaptorBase>::implDo(edm::EventTransitionInfo const&, edm::ModuleCallingContext const*) () from /cvmfs/cms-ib.cern.ch/sw/x86_64/nweek-02943/el8_amd64_gcc13/cms/cmssw/CMSSW_17_0_X_2026-05-27-1100/lib/el8_amd64_gcc13/libFWCoreFramework.so
+#12 0x00007f4eecbcad12 in std::__exception_ptr::exception_ptr edm::Worker::runModuleAfterAsyncPrefetch<edm::OccurrenceTraits<edm::EventPrincipal, (edm::TransitionActionType)1> >(std::__exception_ptr::exception_ptr, edm::OccurrenceTraits<edm::EventPrincipal, (edm::TransitionActionType)1>::TransitionInfoType const&, edm::StreamID, edm::ParentContext const&, edm::OccurrenceTraits<edm::EventPrincipal, (edm::TransitionActionType)1>::Context const*) () from /cvmfs/cms-ib.cern.ch/sw/x86_64/nweek-02943/el8_amd64_gcc13/cms/cmssw/CMSSW_17_0_X_2026-05-27-1100/lib/el8_amd64_gcc13/libFWCoreFramework.so
+#13 0x00007f4eecbcb227 in edm::Worker::RunModuleTask<edm::OccurrenceTraits<edm::EventPrincipal, (edm::TransitionActionType)1> >::execute() () from /cvmfs/cms-ib.cern.ch/sw/x86_64/nweek-02943/el8_amd64_gcc13/cms/cmssw/CMSSW_17_0_X_2026-05-27-1100/lib/el8_amd64_gcc13/libFWCoreFramework.so
+#14 0x00007f4eece12e64 in tbb::detail::d2::function_task<edm::WaitingTaskList::announce()::{lambda()#1}>::execute(tbb::detail::d1::execution_data&) () from /cvmfs/cms-ib.cern.ch/sw/x86_64/nweek-02943/el8_amd64_gcc13/cms/cmssw/CMSSW_17_0_X_2026-05-27-1100/lib/el8_amd64_gcc13/libFWCoreConcurrency.so
+#15 0x00007f4eec39e2f3 in tbb::detail::r1::task_dispatcher::local_wait_for_all<false, tbb::detail::r1::external_waiter> (waiter=..., t=0x7f4cdd97f700, this=<optimized out>) at src/tbb/task_dispatcher.h:344
+#16 tbb::detail::r1::task_dispatcher::local_wait_for_all<tbb::detail::r1::external_waiter> (waiter=..., t=<optimized out>, this=<optimized out>) at src/tbb/task_dispatcher.h:487
+#17 tbb::detail::r1::task_dispatcher::execute_and_wait (t=<optimized out>, wait_ctx=..., w_ctx=...) at src/tbb/task_dispatcher.cpp:169
+#18 0x00007f4eecb462af in edm::FinalWaitingTask::wait() () from /cvmfs/cms-ib.cern.ch/sw/x86_64/nweek-02943/el8_amd64_gcc13/cms/cmssw/CMSSW_17_0_X_2026-05-27-1100/lib/el8_amd64_gcc13/libFWCoreFramework.so
+#19 0x00007f4eecb5a3b9 in edm::EventProcessor::processRuns() () from /cvmfs/cms-ib.cern.ch/sw/x86_64/nweek-02943/el8_amd64_gcc13/cms/cmssw/CMSSW_17_0_X_2026-05-27-1100/lib/el8_amd64_gcc13/libFWCoreFramework.so
+#20 0x00007f4eecb54141 in edm::EventProcessor::runToCompletion() () from /cvmfs/cms-ib.cern.ch/sw/x86_64/nweek-02943/el8_amd64_gcc13/cms/cmssw/CMSSW_17_0_X_2026-05-27-1100/lib/el8_amd64_gcc13/libFWCoreFramework.so
+#21 0x000000000040916d in tbb::detail::d1::task_arena_function<main::{lambda()#1}::operator()() const::{lambda()#1}, void>::operator()() const ()
+#22 0x00007f4eec38d8c2 in tbb::detail::r1::task_arena_impl::execute (ta=..., d=...) at src/tbb/arena.cpp:860
+#23 0x000000000040abfe in main::{lambda()#1}::operator()() const ()
+#24 0x0000000000405268 in main ()
+
+Current Modules:
+
+Module: TICLLayerTileProducer:hltTiclLayerTileProducer (crashed)
+Module: L1FPGATrackProducer:l1tTTTracksFromExtendedTrackletEmulation
+
+A fatal system signal has occurred: segmentation violation
